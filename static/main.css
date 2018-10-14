@@ -1,0 +1,49 @@
+body {
+    background-image: url("/static/images/image2.jpg")
+}
+h1{
+    font-style: verdana;
+    color: rgb(226, 121, 121);
+    text-align: center;
+}
+div {
+    background-color: rgba(4, 70, 49, 0.125);
+    padding: 20px;
+    margin: 0 auto;
+    width: 350px;
+    font: 16px verdana;
+    border-radius: 20px;
+}
+p{
+    font: 15px verdana;
+    color: tomato;
+}
+textarea {
+    height: 100px;
+    width:250px;
+    background-color: white;
+}
+input[type=submit] {
+    margin-left: 45%;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    font: 15px Tahoma;
+    background-color:olive;
+    color:white;
+    border: 2px solid;
+    border-radius: 20px;
+}
+input[type=submit]:hover {
+    background-color: oldlace;
+    color: olive;
+}
+.error{
+    color: red;
+    font: 12px verdana;
+}
+a:visited{
+    color:black;
+    font: 15px;
+    text-decoration:none;
+}
