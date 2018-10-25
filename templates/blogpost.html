@@ -1,6 +1,38 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <h1>{{ title }}</h1>
-    <p>{{ body }}</p>
+{% if value_u %}
+
+<!-- display all blog entries by individual user -->
+<h1 style="text-align: left;">Blog posts</h1>
+    
+{% for user_blog in user %}
+    
+<h3><a href="/blog?id={{user_blog.id}}">{{user_blog.title}}</a></h3>
+<p>{{user_blog.body}}</p>
+<p>written by <a href="/blog?user={{user_blog.owner_id}}">{{user_blog.owner.username}}</a></p>
+<hr />
+    
+{% endfor %}
+     
+{% elif value_i %}
+    
+<!-- display individual blog entry -->
+<h1 style="text-align: center;">{{blog[0].title}}</h1>
+<p>{{blog[0].body}}</p>
+<p>written by <a href="/blog?user={{blog[0].owner_id}}">{{blog[0].owner.username}}</a></p>
+    
+{% else %}
+    
+<!-- display all blog entries -->
+<h1 style="text-align: center;">Build a Blog</h1>
+    
+{% for blogpost in blogs %}
+    <h3><a href="/blog?id={{blogpost.id}}">{{blogpost.title}}</a></h3>
+    <p>{{blogpost.body}}</p>
+    <p>written by <a href="/blog?user={{blogpost.owner_id}}">{{blogpost.owner.username}}</a></p>
+    <hr />
+{% endfor %}
+    
+{% endif %}
 {% endblock %}

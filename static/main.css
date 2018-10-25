@@ -1,5 +1,5 @@
 body {
-    background-image: url("/static/images/image2.jpg")
+    background-image: url("/static/images/blue.jpg")
 }
 h1{
     font-style: verdana;
@@ -7,7 +7,8 @@ h1{
     text-align: center;
 }
 div {
-    background-color: rgba(4, 70, 49, 0.125);
+    background-color: rgba(9, 208, 145, 0.125);
+    word-spacing: 1cm; 
     padding: 20px;
     margin: 0 auto;
     width: 350px;
@@ -46,4 +47,16 @@ a:visited{
     color:black;
     font: 15px;
     text-decoration:none;
+}
+ul{
+    padding: 0;
+    display: inline-block;
+}
+hr{
+    margin: 40px auto;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px; 
 }

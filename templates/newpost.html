@@ -5,14 +5,14 @@
     <form action="/newpost" method="POST">
         <div>
             <b>Title for your new blog:</b><br/>
-            <input type='text' name="title" value="{{title}}"><br/>
-            <span class="error">{{title_err}}</span>
+            <input id="title" type='text' name="title_f" value="{{title_p}}"><br/>
+            <span class="error">{{errorTitle}}</span>
         </div>
         <br/>
         <div>
             <b>Your new blog:</b><br/>
-            <textarea name="body">{{body}}</textarea><br/>
-            <span class="error">{{body_err}}</span>
+            <textarea name="body_f" id="bpost" cols="30" rows="10">{{body_p}}</textarea><br/>
+            <span class="error">{{errorBody}}</span>
         </div>
         <br/>
         <input type="submit" value="Publish New Entry">

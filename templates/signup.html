@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Signup</h1>
+
+<form action="/signup" method='POST'>
+    <br>
+    <div>
+        <label>Username:
+            <input type="text" name="username_f" value='{{request.form.username_f}}'/>
+        </label>
+        <span class = "error">{{ username_error }}</span>
+    </div>
+    <div>
+        <label>Password:
+            <input type="password" name="password_f" value='{{password}}'/>
+        </label>
+        <span class = "error">{{ password1_error }}</span>
+    </div>
+    <div>
+        <label>Verify Password:
+            <input type="password" name="verify_f" value='{{password}}'/>
+        </label>
+        <span class = "error">{{ password2_error }}</span>
+    </div>
+    <br>
+    <input type="submit" value="Sign up"/>
+    
+</form>
+
+{% endblock %}

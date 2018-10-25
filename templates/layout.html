@@ -2,11 +2,82 @@
 <html>
     <head>
         <title>Build A Blog</title>
-        <link rel="stylesheet" href="../static/main.css">
-    </head>
+        <!--<link rel= "stylesheet" href= "../static/main.css">-->
+        <style> 
+        body {
+            background-image: url("http://wallscollection.net/wp-content/uploads/2016/12/Awesome-Beautiful-Blue-Background-Images-.jpg")
+        }
+        h1{
+            font-style: verdana;
+            color: white;
+            text-align: center;
+        }
+        div {
+            color: rgb(10, 220, 181);
+            font: 16px verdana;
+        }
+        p{
+            font: 20px verdana;
+            color: tomato;
+        }
+        label{
+            font: 20px verdana;
+            color:rgb(10, 220, 181);
+        }
+        
+        textarea {
+            height: 100px;
+            width:250px;
+            background-color: white;
+        }
+        input[type=submit] {
+            margin-left: 45%;
+            height: 50px;
+            text-align: center;
+            align-items: center;
+            font: 20px Tahoma;
+            background-color:olive;
+            color:white;
+            border: 2px solid;
+            border-radius: 10px;
+        }
+        input[type=submit]:hover {
+            background-color: oldlace;
+            color: olive;
+        }
+        .error{
+            color: red;
+            font: 15px verdana;
+        }
+        a:visited{
+            color: whitesmoke;
+            font: 15px;
+            text-decoration:none;
+        }
+        ul{
+            list-style-type: circle;
+            color: rgb(227, 123, 123);
+            margin-left: 30%; 
+        }
+        hr{
+            margin: 40px auto;
+        }
+        li{
+            font: 20px verdana;
+            color: rgb(227, 123, 123);
+        }
+        </style>
+   </head>
     <body>
-        <a href ="/">Main Blog Page</a>
-        <a href ="/newpost">Add a Blog Entry</a>
+        <div style='float: right; word-spacing:0.5em;'>
+            <a href="/login">Login</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div style='word-spacing:0.3em' >
+            <a href ="/">Home</a>
+            <a href ="/blog">All Posts</a>
+            <a href ="/newpost">New Post</a>
+        </div>
         {% block body %}
         {% endblock %}
     </body>

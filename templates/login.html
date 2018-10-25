@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Log in to Blogz</h1>
+<p>Don't have an account? <a href="/signup">Create one!</a></p>
+
+<form action="/login" method="POST">
+    <table>
+        <tr>
+            {% with messages = get_flashed_messages(category_filter=["user"]) %}
+            <td><label for="username">Username</label></td>
+            <td>
+                <input id="username" name="username_f" type="text" value="{{request.form.username_f}}">
+                <span class='error'>{{messages[0]}}</span>
+            </td>
+            {% endwith %}
+        </tr>
+        <br>
+        <tr>
+            {% with messages = get_flashed_messages(category_filter=["pwd"]) %}
+            <td><label for="password">Password</label></td>
+            <td>
+                <input id="password" name="password_f" type="password">
+                <span class='error'>{{messages[0]}}</span>
+            </td>
+            {% endwith %}
+        </tr>
+        {#{% endfor %}#}
+        
+
+    </table>
+    <input type="submit" value="Log In" />
+</form>
+{% endblock %}
